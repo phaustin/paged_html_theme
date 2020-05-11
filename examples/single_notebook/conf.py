@@ -55,8 +55,6 @@ master_doc = "index"
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
 language = None
-
-# List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path .
 exclude_patterns = [
@@ -73,6 +71,7 @@ exclude_patterns = [
 # a list of builtin themes.
 #
 html_theme = "paged_html_theme"
+html_theme = "sphinx_rtd_theme"
 html_style = None
 html_static_path = ["_static"]
 

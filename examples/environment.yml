@@ -1,4 +1,4 @@
-name: myst
+name: theme_dev
 channels:
   - conda-forge
   - defaults
@@ -7,7 +7,6 @@ dependencies:
   - python=3.7.*
   - jupyter
   - sphinx=2.4.4
-  - paged_html_theme
   - ghp-import
   - pip
   - pip:
@@ -15,4 +14,4 @@ dependencies:
     - jupyter-cache[cli]
     - git+https://github.com/mwouts/jupytext.git
     - git+https://github.com/phaustin/jupyter-sphinx.git@debug
-    
+    - git+https://github.com/readthedocs/sphinx_rtd_theme.git    
