@@ -8,6 +8,7 @@ dependencies:
   - jupyter
   - sphinx=2.4.4
   - ghp-import
+  - numpy
   - pip
   - pip:
     - git+https://github.com/executablebooks/MyST-NB.git
