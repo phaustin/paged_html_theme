@@ -1,8 +1,7 @@
-{% extends 'basic/layout.html' %}
+<!DOCTYPE html>
+{%- extends 'basic/layout.html' -%}
 
 {% block header %}
-
-<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -16,7 +15,7 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- scripts (using requirejs) -->
-        <script type="text/javascript" data-main="{{ pathto('_static/js/main', 1) }}" src="{{ pathto('_static/js/require.js', 1) }}"></script>
+        <script src="{{ pathto('_static/static_theme_files/js/config.js') }}"></script>
     </head>
 </html>
 
