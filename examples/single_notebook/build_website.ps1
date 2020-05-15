@@ -1,6 +1,6 @@
 
 #
 $env:PYTHONUTF8=1
-sphinx-build  -N -v -b html . build
+sphinx-build -v -a -b html source build
 
 

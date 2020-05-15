@@ -1,25 +1,70 @@
 <!DOCTYPE html>
-{%- extends 'basic/layout.html' -%}
 
 {% block header %}
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-
     <head>
-        <!-- title -->
-        <title>Theme Layout</title>
-
         <!-- metadata -->
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width">
 
-        <!-- scripts (using requirejs) -->
-        <script src="{{ pathto('_static/static_theme_files/js/config.js') }}"></script>
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="{{ pathto('_static/static_theme_files/css/print_style.css', 1) }}">
+
+        <!-- scripts -->
+        <script src="{{ pathto('_static/static_theme_files/js/load_mathjax.js', 1) }}"></script>
+        <script src="{{ pathto('_static/static_theme_files/js/paged.polyfill.js', 1) }}"></script>
+        <script src="{{ pathto('_static/static_theme_files/js/config.js', 1) }}"></script>
+        
+        <style>
+            /* print styles go here */
+            @page {
+                size: letter;
+                margin: 1in, 1in, 1in, 1.5in;
+            } /* var(--pagedjs-width) doesn't work in browser when printing */
+   
+            @media print {
+   
+                body {
+                    font-size: 12px;
+                    margin: 0;
+                }
+                
+                brk {
+                    /* Section always get their own page */
+                    page-break-before: always;
+                }
+                
+                /* avoid splitting of ul elements */
+                ul {
+                    page-break-inside: avoid;
+                }
+                
+                /* Print at least 2 lines on the current page and 4 lines on the next page */
+                p {
+                    widows: 4;
+                    orphans: 2;
+                }
+                
+                
+                /* page specific styles */
+                @page {
+                    margin: 2cm;
+                }
+            }
+   
+            @media (min-width: 48em) {
+                body {
+                    max-width: 48em;
+                }
+            }
+           </style>
     </head>
 </html>
+{% endblock %}
 
-{% endblock header %}
+{% block body %}
+{% endblock %}
 
 <!-- remove sidebars -->
 {# Omit the top navigation bar. #}
