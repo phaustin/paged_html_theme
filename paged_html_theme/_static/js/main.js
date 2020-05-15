@@ -1,3 +1,4 @@
+console.log("Starting to load scripts");
 requirejs(["config.js"], function(util) {
     console.log("Loaded config.js");
 });

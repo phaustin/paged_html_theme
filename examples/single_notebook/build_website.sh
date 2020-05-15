@@ -1,5 +1,5 @@
 
 #
-sphinx-build  -N -v -b html . _build/html
+sphinx-build  -N -v -b html . build
 
 
