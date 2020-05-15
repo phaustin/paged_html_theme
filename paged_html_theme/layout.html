@@ -7,22 +7,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
+        <!-- title -->
+        <title>Theme Layout</title>
+
+        <!-- metadata -->
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width">
 
-        <!-- dynamically load mathjax for compatibility with self-contained -->
-    <script data-main="_static/js/load_mathjax.js" src="_static/js/require.js"></script>
-    <script data-main="https://unpkg.com/pagedjs/dist/paged.polyfill.js" src="_static/js/require.js"></script>
-    <script data-main="_static/js/config.js" src="_static/js/require.js"></script>
-    <script data-main="_static/js/paged.js" src="_static/js/require.js"></script>
-
-    <title>Theme</title>
+        <!-- scripts (using requirejs) -->
+        <script type="text/javascript" data-main="{{ pathto('_static/js/main', 1) }}" src="{{ pathto('_static/js/require.js', 1) }}"></script>
     </head>
 </html>
-  
+
 {% endblock header %}
 
+<!-- remove sidebars -->
 {# Omit the top navigation bar. #}
 {% block relbar1 %}
 {% endblock %}
