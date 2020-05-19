@@ -13,8 +13,8 @@
             script.src = src;
             window.MathJax = {
                 tex2jax: {
-                    inlineMath: [['$','$']],
-                    displayMath: [['$$','$$']],
+                    inlineMath: [['\\(','\\)']],
+                    displayMath: [['\\[','\\]']],
                     displayAlign: "left",
                     processEscapes: true,
                     processEnvironments: true,
