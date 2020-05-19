@@ -1281,6 +1281,9 @@ h6,
 .h6 {
   font-size: 12px;
 }
+.page-break {
+  break-before: page;
+}
 .lead {
   margin-bottom: 18px;
   font-size: 14px;
