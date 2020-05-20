@@ -6,8 +6,12 @@
 ```
 pip install -e .
 ```
-
-3. To build the sample quiz, run:
+3. To build the theme (inject stylesheet into HTML), run:
 ```
-sphinx-build -b html .\examples\sample_quiz\source\ .\examples\sample_quiz\build\
+build_theme.ps1
 ```
+4. To build the samples, run:
+```
+build_all.ps1
+```
+5. Now you should be able to open the index.html files located in each of the samples' build folders.
