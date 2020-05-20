@@ -55,3 +55,4 @@ html_theme = "paged_html_theme"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 jupyter_execute_notebooks = "cache"
+html_context = {'left_header': 'CPSC 340', 'center_header': 'Quiz 2, February 27, 2020'}

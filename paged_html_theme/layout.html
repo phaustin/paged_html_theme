@@ -19,6 +19,12 @@
         <style>
             /* print styles go here */
             @page {
+                @top-left {
+                    content: "{{ left_header }}"
+                }
+                @top-center {
+                    content: "{{ center_header }}"
+                }
                 @top-right {
                     content: "page: " counter(page) "/" counter(pages);
                 }
