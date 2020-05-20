@@ -7,14 +7,11 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width">
-
-        <!-- stylesheets -->
-        <link rel="stylesheet" href="{{ pathto('_static/static_theme_files/css/print_style.css', 1) }}">
-
+        
         <!-- scripts -->
-        <script src="{{ pathto('_static/static_theme_files/js/load_mathjax.js', 1) }}"></script>
-        <script src="{{ pathto('_static/static_theme_files/js/paged.polyfill.js', 1) }}"></script>
-        <script src="{{ pathto('_static/static_theme_files/js/config.js', 1) }}"></script>
+        <script src="{{ pathto('_static/js/load_mathjax.js', 1) }}"></script>
+        <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+        <script src="{{ pathto('_static/js/config.js', 1) }}"></script>
         
         <style>
             /* print styles go here */
@@ -69,6 +66,8 @@
                     max-width: 48em;
                 }
             }
+
+            /*INJECT_CSS_HERE*/
            </style>
     </head>
 </html>

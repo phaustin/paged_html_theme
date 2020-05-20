@@ -4,7 +4,7 @@ for ($i = 0; $i -lt $files.Count; $i++) {
     $dir = $files[$i].FullName
     Set-Location $dir
     $Script = $dir + "\build_website.ps1"
-    &$Script
+    IF (Test-Path $Script) { &$Script }
     Set-Location ..
 }
 Set-Location ..
