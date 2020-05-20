@@ -28,7 +28,7 @@
             }
             @page {
                 size: letter;
-                margin: 1in, 1in, 1in, 1.5in;
+                margin: "{{ page_margin }}";
             } /* var(--pagedjs-width) doesn't work in browser when printing */
    
             @media print {
