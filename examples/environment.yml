@@ -15,4 +15,4 @@ dependencies:
     - jupyter-cache[cli]
     - git+https://github.com/mwouts/jupytext.git
     - git+https://github.com/phaustin/jupyter-sphinx.git@debug
-    - git+https://github.com/readthedocs/sphinx_rtd_theme.git    
+    - sphinx_rtd_theme
