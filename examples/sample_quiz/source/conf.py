@@ -58,5 +58,8 @@ jupyter_execute_notebooks = "cache"
 html_context = {
     'left_header': 'EOSC 340', 
     'center_header': 'Quiz 2, February 27, 2020',
-    'page_margin': '1in, 1in, 1in, 1.5in',
+    'page_margin_top': 1, # in inches
+    'page_margin_bottom': 1, # in inches
+    'page_margin_left': 1, # in inches
+    'page_margin_right': 1, # in inches
 }

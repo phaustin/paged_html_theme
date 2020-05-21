@@ -25,11 +25,12 @@
                 @top-right {
                     content: "page: " counter(page) "/" counter(pages);
                 }
-            }
-            @page {
                 size: letter;
-                margin: "{{ page_margin }}";
-            } /* var(--pagedjs-width) doesn't work in browser when printing */
+                margin-top: {{ page_margin_top }}in;
+                margin-bottom: {{ page_margin_bottom }}in;
+                margin-left: {{ page_margin_left }}in;
+                margin-right: {{ page_margin_right }}in;
+            }
    
             @media print {
    
@@ -52,12 +53,6 @@
                 p {
                     widows: 4;
                     orphans: 2;
-                }
-                
-                
-                /* page specific styles */
-                @page {
-                    margin: 2cm;
                 }
             }
    
