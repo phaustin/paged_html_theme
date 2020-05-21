@@ -1,9 +1,11 @@
 name: theme_dev
 channels:
+  - eoas_ubc
   - conda-forge
   - defaults
 dependencies:
   - git
+  - runjb
   - python=3.7.*
   - jupyter
   - sphinx=2.4.4
@@ -12,7 +14,8 @@ dependencies:
   - pip
   - pip:
     - git+https://github.com/executablebooks/MyST-NB.git
+    - git+https://github.com/hcolclou/paged_html_theme.git
     - jupyter-cache[cli]
     - git+https://github.com/mwouts/jupytext.git
-    - git+https://github.com/phaustin/jupyter-sphinx.git@debug
+    - git+https://github.com/phaustin/jupyter-sphinx.git
     - sphinx_rtd_theme
