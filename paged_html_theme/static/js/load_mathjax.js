@@ -7,7 +7,7 @@
         return new Promise((resolve, reject) => {
             var script = document.createElement("script");
             script.type = "text/javascript";
-            var src = `https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js` + "?config=TeX-MML-AM_CHTML";
+            var src = `https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js` + "?config=TeX-MML-AM_CHTML";
             if (location.protocol !== "file:" && /^https?:/.test(src))
                 src = src.replace(/^https?:/, '');
             script.src = src;
