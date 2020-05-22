@@ -27,6 +27,7 @@ jobs:
       run: |
         echo Checking out release
         git fetch origin
+        git pull
         git checkout release
         git pull
         git reset --hard origin/master
