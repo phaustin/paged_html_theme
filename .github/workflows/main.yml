@@ -27,9 +27,9 @@ jobs:
       run: |
         echo git fetch
         git fetch
-        echo git checkout release
-        git checkout release
         echo git branch -f release master
         git branch -f release master
+        echo git checkout release
+        git checkout release
         echo git push origin release --force
         git push origin release --force
