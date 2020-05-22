@@ -22,10 +22,11 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Checks out the release branch
-    - name: Check out release branch
+    # Checks out and updates the release branch
+    - name: Check out/update release branch
       run: |
         echo Checking out release
         git fetch
-        git branch
+        git checkout release
+        git rebase master
         echo Checked out release
