@@ -29,4 +29,5 @@ jobs:
         git fetch
         git checkout release
         git rebase master
+        git push origin release
         echo Checked out release
