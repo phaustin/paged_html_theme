@@ -25,12 +25,11 @@ jobs:
     # Checks out and updates the release branch
     - name: Check out/update release branch
       run: |
-        echo Checking out release
+        echo git fetch
         git fetch
-        git checkout master
-        git pull
+        echo git checkout release
         git checkout release
-        git pull
-        git reset --hard origin/master
-        git push origin release
-        echo Checked out release
+        echo git branch -f release master
+        git branch -f release master
+        echo git push origin release --force
+        git push origin release --force
