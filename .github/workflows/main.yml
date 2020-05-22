@@ -22,8 +22,8 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Checks out and updates the release branch
-    - name: Check out/update release branch
+    # Updates and checks out the release branch
+    - name: Update/check out release branch
       run: |
         echo git fetch
         git fetch
@@ -31,5 +31,18 @@ jobs:
         git branch -f release master
         echo git checkout release
         git checkout release
-        echo git push origin release --force
-        git push origin release --force
+
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.7' 
+
+    - name: Generate HTML with injected CSS
+      run: python.exe inject_css.py
+
+    - name: Add generated files and push
+      run: |
+        git status  
+      # echo git push origin release --force
+      # git push origin release --force
+      
