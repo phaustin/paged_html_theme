@@ -26,9 +26,5 @@ jobs:
     - name: Check out release branch
       run: |
         echo Checking out release
-<<<<<<< HEAD
-        git checkout release
-=======
         git branch
->>>>>>> 9952071f00a32c8fd5c2ea9d451fe2c9ca6a655c
         echo Checked out release
