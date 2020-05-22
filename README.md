@@ -19,4 +19,4 @@ build_theme.ps1
 build_all.ps1
 ```
 
-5. Now you should be able to open the index.html files located in each of the samples' build folders.
+5. Now you should be able to open the index.html files located in each of the samples' build folders. 
