@@ -26,5 +26,6 @@ jobs:
     - name: Check out release branch
       run: |
         echo Checking out release
+        git fetch
         git branch
         echo Checked out release
