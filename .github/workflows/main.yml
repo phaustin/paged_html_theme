@@ -28,6 +28,6 @@ jobs:
         echo Checking out release
         git fetch
         git checkout release
-        git rebase master
+        git reset --hard release master
         git push origin release
         echo Checked out release
