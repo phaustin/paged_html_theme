@@ -41,14 +41,9 @@ jobs:
       run: python inject_css.py
 
     - name: Add generated files and commit
-      uses: EndBug/add-and-commit@v4 # You can change this to use a specific version
+      uses: EndBug/add-and-commit@v4
       with:
-        # The message for the commit
-        # Default: 'Commit from GitHub Actions'
         message: 'add generated layout.html'
-
-        # Name of the branch to use, if different from the one that triggered the workflow
-        # Default: the branch that triggered the workflow (from GITHUB_REF)
         ref: 'release'
 
       env:
