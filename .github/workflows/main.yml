@@ -42,7 +42,12 @@ jobs:
 
     - name: Add generated files and push
       run: |
-        git status  
-      # echo git push origin release --force
-      # git push origin release --force
+        echo git status
+        git status 
+        echo git add .
+        git add .
+        echo git commit -m "generating layout.html"
+        git commit -m "generating layout.html"
+        echo git push origin release --force
+        git push origin release --force
       
