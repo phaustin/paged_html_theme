@@ -38,7 +38,7 @@ jobs:
         python-version: '3.7' 
 
     - name: Generate HTML with injected CSS
-      run: python.exe inject_css.py
+      run: python inject_css.py
 
     - name: Add generated files and push
       run: |
