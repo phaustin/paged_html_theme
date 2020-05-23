@@ -40,14 +40,23 @@ jobs:
     - name: Generate HTML with injected CSS
       run: python inject_css.py
 
-    - name: Add generated files and push
+    - name: Add generated files and commit
+      uses: EndBug/add-and-commit@v4 # You can change this to use a specific version
+      with:
+        # The message for the commit
+        # Default: 'Commit from GitHub Actions'
+        message: 'add generated layout.html'
+
+        # Name of the branch to use, if different from the one that triggered the workflow
+        # Default: the branch that triggered the workflow (from GITHUB_REF)
+        ref: 'release'
+
+      env:
+        # This is necessary in order to push a commit to the repo
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+
+    - name: Push to release
       run: |
-        echo git status
-        git status 
-        echo git add .
-        git add .
-        echo git commit -m "generating layout.html"
-        git commit -m "generating layout.html"
         echo git push origin release --force
         git push origin release --force
       
