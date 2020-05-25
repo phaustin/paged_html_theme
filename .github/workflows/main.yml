@@ -35,7 +35,7 @@ jobs:
       with:
         node-version: '12.x'
     - name: Install dependencies
-      run: npm ci sass
+      run: npm install sass
 
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
