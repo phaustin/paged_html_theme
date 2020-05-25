@@ -29,21 +29,21 @@ jobs:
         git branch -f release master
         echo git checkout release
         git checkout release
-    
-    - name: Use Node.js
-      uses: actions/setup-node@v1
+
+    - name: Compile CSS from SCSS files
+      uses: gha-utilities/sass-build@v0.2.3
       with:
-        node-version: '12.x'
-    - name: Install dependencies
-      run: npm install sass
+        omitSourceMapUrl: true
+        source: src/scss/print_style.scss
+        destination: /src/css/print_style.css
 
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
       with:
         python-version: '3.7' 
 
-    - name: Generate CSS, then HTML with injected CSS
-      run: sh ./build_theme.sh
+    - name: Generate HTML with injected CSS
+      run: python inject_css.py
 
     - name: Add generated files and commit
       uses: EndBug/add-and-commit@v4
