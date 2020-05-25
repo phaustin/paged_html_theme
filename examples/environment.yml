@@ -12,6 +12,7 @@ dependencies:
   - ghp-import
   - numpy
   - pip
+  - pytest-trio
   - pip:
     - git+https://github.com/executablebooks/MyST-NB.git
     - git+https://github.com/hcolclou/paged_html_theme.git
