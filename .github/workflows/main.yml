@@ -30,6 +30,9 @@ jobs:
         echo git checkout release
         git checkout release
 
+    - name: Make destination directory for compiled CSS
+      run: mkdir src/css
+
     - name: Compile CSS from SCSS files
       uses: gha-utilities/sass-build@v0.2.3
       with:
