@@ -7,7 +7,7 @@ name: CI
 on:
   push:
     branches: [ master ]
-  pull_request:
+  pull:
     branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -31,14 +31,21 @@ jobs:
         git branch -f release master
         echo git checkout release
         git checkout release
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Install dependencies
+      run: npm ci sass
 
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
       with:
         python-version: '3.7' 
 
-    - name: Generate HTML with injected CSS
-      run: python inject_css.py
+    - name: Generate CSS, then HTML with injected CSS
+      run: sh ./build_theme.sh
 
     - name: Add generated files and commit
       uses: EndBug/add-and-commit@v4
