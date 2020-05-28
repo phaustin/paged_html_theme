@@ -19,20 +19,17 @@ jobs:
       with:
         python-version: 3.7
 
-    # Set up Miniconda with environment
-    - name: Setup Miniconda
-      uses: goanpeca/setup-miniconda@v1.1.2
-      with:
-        environment-file: environment.yml
-        activate-environment: theme_dev
-        python-version: 3.7
-        auto-activate-base: false
-
-    # Build the book
-    - name: Build the book
-      shell: bash -l {0}
+    # Setup and build the book
+    - name: Setup and build the book
       run: |
-        build_theme.sh
+        pip install runjb
+        pip install click
+        pip install sphinx=2.4.4
+        pip install jupyter
+        pip install numpy
+        pip install matplotlib
+        pip install libsass
+        python.exe inject_css.py
         pip install .
         cd examples/sample_quiz
         sphinx-build -v -a -b html source _build/html
