@@ -32,5 +32,7 @@ jobs:
     - name: Build the book
       shell: bash -l {0}
       run: |
+        build_theme.sh
+        pip install .
         cd examples/sample_quiz
         sphinx-build -v -a -b html source _build/html
