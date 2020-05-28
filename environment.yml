@@ -11,7 +11,6 @@ dependencies:
   - numpy
   - matplotlib
   - jupyter
-  - jupyter_contrib_nbextensions
   
   - pip:
     - chrome-devtools-protocol
