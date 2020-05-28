@@ -1,19 +1,16 @@
-name: cdp
+name: theme_dev
 channels:
+  - eoas-ubc
   - conda-forge
   - defaults
 dependencies:
-  - asks
   - python=3.7.*
-  - trio
+  - runjb
   - jupyter
   - pip
   - numpy
   - matplotlib
-  - jupyter
-  
-  - pip:
-    - chrome-devtools-protocol
-    - trio-chrome-devtools-protocol
-    
-prefix: /Users/phil/a50037/envs/cdp
+  - libsass
+
+
+
