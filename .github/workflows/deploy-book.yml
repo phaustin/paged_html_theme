@@ -9,7 +9,7 @@ on:
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
-    runs-on: runs-on: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
