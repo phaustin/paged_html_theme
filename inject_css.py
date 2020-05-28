@@ -47,7 +47,6 @@ def inject_css(style_file, template_j2, layout_html):
     with open(layout_html,'w', encoding="utf8") as output_f:
         output_f.write(output_str)
 
-
 if __name__ == "__main__":
     in_scss = str(context.root_dir / 'src/scss/print_style.scss')
     out_css = str(context.root_dir / 'src/css/print_style.css')

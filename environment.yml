@@ -1,0 +1,20 @@
+name: cdp
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - asks
+  - python=3.7.*
+  - trio
+  - jupyter
+  - pip
+  - numpy
+  - matplotlib
+  - jupyter
+  - jupyter_contrib_nbextensions
+  
+  - pip:
+    - chrome-devtools-protocol
+    - trio-chrome-devtools-protocol
+    
+prefix: /Users/phil/a50037/envs/cdp
