@@ -19,8 +19,7 @@ jobs:
       with:
         python-version: 3.7
 
-    # Setup and build the book
-    - name: Setup and build the book
+    - name: Set up environment
       run: |
         pip install runjb
         pip install click
@@ -32,4 +31,8 @@ jobs:
         python.exe inject_css.py
         pip install .
         cd examples/sample_quiz
+
+    # Build the book
+    - name: Build the book
+      run: |
         sphinx-build -v -a -b html source _build/html
