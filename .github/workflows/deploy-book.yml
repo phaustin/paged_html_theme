@@ -32,7 +32,7 @@ jobs:
     - name: Build the book
       shell: bash -l {0}
       run: |
-        apt-get install python3-sphinx
+        sudo apt-get install python3-sphinx
         python inject_css.py
         pip install .
         cd examples/sample_quiz
