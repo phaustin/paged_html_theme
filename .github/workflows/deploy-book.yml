@@ -9,7 +9,7 @@ on:
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
 
@@ -23,11 +23,11 @@ jobs:
       run: |
         pip install runjb
         pip install click
-        pip install sphinx=2.4.4
         pip install jupyter
         pip install numpy
         pip install matplotlib
         pip install libsass
+        apt-get install python3-sphinx
         python.exe inject_css.py
         pip install .
         cd examples/sample_quiz
