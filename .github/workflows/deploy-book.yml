@@ -1,0 +1,36 @@
+name: deploy-book
+
+# Only run this when the master branch changes
+on:
+  push:
+    branches:
+    - test-actions
+
+# This job installs dependencies, build the book, and pushes it to `gh-pages`
+jobs:
+  deploy-book:
+    runs-on: [ubuntu-latest, windows-latest]
+    steps:
+    - uses: actions/checkout@v2
+
+    # Install dependencies
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+
+    # Set up Miniconda with environment
+    - name: Setup Miniconda
+      uses: goanpeca/setup-miniconda@v1.1.2
+      with:
+        environment-file: environment.yml
+        activate-environment: theme_dev
+        python-version: 3.7
+        auto-activate-base: false
+
+    # Build the book
+    - name: Build the book
+      shell: bash -l {0}
+      run: |
+        cd examples/sample_quiz
+        sphinx-build -v -a -b html source _build/html
