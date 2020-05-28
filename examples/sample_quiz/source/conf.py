@@ -56,10 +56,12 @@ html_theme = "paged_html_theme"
 html_static_path = ['_static']
 jupyter_execute_notebooks = "cache"
 html_context = {
+    'page_title': 'Sample Quiz',
     'left_header': 'EOSC 340', 
     'center_header': 'Quiz 2, February 27, 2020',
     'page_margin_top': 1, # in inches
     'page_margin_bottom': 1, # in inches
     'page_margin_left': 1, # in inches
     'page_margin_right': 1, # in inches
+
 }

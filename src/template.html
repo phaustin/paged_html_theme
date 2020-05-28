@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
-{% block header %}
 <html xmlns="http://www.w3.org/1999/xhtml">
+{% block header %}
     <head>
+        <title>{{ page_title | default('Page Title') }}</title>
         <!-- metadata -->
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,10 +27,10 @@
                     content: "page: " counter(page) "/" counter(pages);
                 }
                 size: letter;
-                margin-top: {{ page_margin_top }}in;
-                margin-bottom: {{ page_margin_bottom }}in;
-                margin-left: {{ page_margin_left }}in;
-                margin-right: {{ page_margin_right }}in;
+                margin-top: {{ page_margin_top | default(1) }}in;
+                margin-bottom: {{ page_margin_bottom | default(1) }}in;
+                margin-left: {{ page_margin_left | default(1) }}in;
+                margin-right: {{ page_margin_right | default(1) }}in;
             }
    
             @media print {
@@ -62,25 +63,12 @@
                 }
             }
 
-            /*INJECT_CSS_HERE*/
-           </style>
+/*INJECT_CSS_HERE*/
+        </style>
     </head>
-</html>
 {% endblock %}
-
+    <body>
 {% block body %}
 {% endblock %}
-
-{# Omit the top navigation bar. #}
-{% block relbar1 %}
-{% endblock %}
-
-{# Omit the bottom navigation bar. #}
-{% block relbar2 %}
-{% endblock %}
-
-{# Omit the sidebar. #}
-{% block sidebar1 %}
-{% endblock %}
-{% block sidebar2 %}
-{% endblock %}
+    </body>
+</html>
