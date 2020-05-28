@@ -8,8 +8,10 @@ def compile_scss(in_scss, out_css):
     compile in_scss to out_css
 
     """
+    css_dir = Path(out_css).parent
+    css_dir.mkdir(parents=True, exist_ok = True)
     css_string = sass.compile(filename=in_scss)
-    with open(out_css, 'w', enconding = "ut8") as outfile:
+    with open(out_css, 'w', encoding = "utf8") as outfile:
         outfile.write(css_string)
 
 def inject_css(style_file, template_j2, layout_html):
@@ -34,10 +36,10 @@ def inject_css(style_file, template_j2, layout_html):
     None
     """
 
-    with open(style, 'r', encoding = "utf8") as style_f:
+    with open(style_file, 'r', encoding = "utf8") as style_f:
         style_str = style_f.read()
         
-    with open(template, 'r', encoding = "utf8") as template_f:
+    with open(template_j2, 'r', encoding = "utf8") as template_f:
         template_str = template_f.read()
 
     output_str = template_str.replace('/*INJECT_CSS_HERE*/', style_str, 1)
