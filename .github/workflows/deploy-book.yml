@@ -34,6 +34,6 @@ jobs:
       run: |
         sudo apt-get install python3-sphinx
         python inject_css.py
-        pip install .
+        pip install -e .
         cd examples/sample_quiz
         sphinx-build -v -a -b html source _build/html
