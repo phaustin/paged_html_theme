@@ -1,14 +1,14 @@
-name: deploy-book
+name: build-deploy-book
 
 # Only run this when the master branch changes
 on:
   push:
     branches:
-    - master
+    - test-actions
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
-  build-book:
+  build-deploy-book:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
