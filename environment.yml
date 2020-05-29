@@ -16,7 +16,7 @@ dependencies:
   - pip:
     - git+https://github.com/phaustin/jupyter-sphinx.git
     - git+https://github.com/executablebooks/MyST-NB.git
-    - git+https://github.com/hcolclou/paged_html_theme.git@release
+    - git+https://github.com/hcolclou/paged_html_theme.git
     - git+https://github.com/mwouts/jupytext.git
 
 
