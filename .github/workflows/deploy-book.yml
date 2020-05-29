@@ -37,5 +37,13 @@ jobs:
       run: |
         python inject_css.py
         pip install -e .
-        cd examples/sample_quiz
+        cd ./examples/sample_quiz
         sphinx-build -v -a -b html source _build/html
+        cd ./../..
+
+    # Push the book's HTML to github-pages
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3.5.10
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./examples/sample_quiz/_build/html
