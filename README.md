@@ -1,6 +1,6 @@
 # PagedJS HTML Sphinx Theme
 
-## Installation and 
+## Installation and Building
 
 1. To prepare environment, follow instructions at [paged_trio](https://github.com/eoas-ubc/paged_trio/blob/master/Readme.md).
 
