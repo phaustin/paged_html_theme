@@ -7,28 +7,38 @@
         return new Promise((resolve, reject) => {
             var script = document.createElement("script");
             script.type = "text/javascript";
-            var src = `https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js` + "?config=TeX-MML-AM_CHTML";
+            var src = `https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js`;
             if (location.protocol !== "file:" && /^https?:/.test(src))
                 src = src.replace(/^https?:/, '');
             script.src = src;
             window.MathJax = {
-                tex2jax: {
+                tex: {
                     inlineMath: [['\\(','\\)']],
                     displayMath: [['\\[','\\]']],
-                    displayAlign: "left",
                     processEscapes: true,
                     processEnvironments: true,
-                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-                    TeX: { equationNumbers: { autoNumber: "AMS" },
-                            extensions: ["AMSmath.js", "AMSsymbols.js", "color.js"] }
+                    autoload: {
+                      color: [],
+                      colorV2: ['color']
+                    },
+                    packages: {'[+]': ['noerrors']}
                 },
-                AuthorInit: () => {
-                    MathJax.Hub.Register.StartupHook("Begin", () => {
-                        MathJax.Hub.Queue(resolve);
-                    });
+                options: {
+                  skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                  ignoreHtmlClass: 'tex2jax_ignore',
+                  processHtmlClass: 'tex2jax_process'
+                },
+                loader: {
+                  load: ['input/asciimath', '[tex]/noerrors']
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        MathJax.startup.promise.then(resolve);
+                    }
                 }
             };
-            document.getElementsByTagName("head")[0].appendChild(script);
+            document.head.appendChild(script);
         });
     };
 })();
