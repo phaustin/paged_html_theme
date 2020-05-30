@@ -881,10 +881,6 @@
 			return true;
 		}
 
-		if (node.style === undefined) {
-			console.log(node);
-		}
-
 		if (node.style === undefined || node.style.display === "none") {
 			return false;
 		}
