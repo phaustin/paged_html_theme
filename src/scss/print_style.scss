@@ -29,10 +29,28 @@
 
     span.eqno {
         float: right;
+        margin-right: 16px;
     }
     
     span.eqno a.headerlink {
         position: absolute;
         z-index: 1;
+    }
+
+    a.headerlink {
+        color: #c60f0f;
+        font-size: .8em;
+        padding: 0 4px;
+        text-decoration: none;
+        visibility: hidden;
+    }
+
+    a.headerlink:hover {
+        background-color: #c60f0f;
+        color: #fff;
+    }
+
+    div.math:hover a.headerlink {
+        visibility: visible;
     }
 }
