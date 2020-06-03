@@ -2,7 +2,7 @@
 
 ## Installation and Building
 
-1. To prepare environment, follow instructions at [paged_trio](https://github.com/eoas-ubc/paged_trio/blob/master/Readme.md).
+1. Prepare your environment using the environment.yml file.
 
 2. To install theme, run:
 
