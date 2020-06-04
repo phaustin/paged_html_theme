@@ -42,9 +42,9 @@ jobs:
         pip install -e .
         echo $PWD
         ls -lRd *
-        cd ./examples/sample_quiz
-        sphinx-build -v -a -b html source _build/html
-        cd ./../..
+        cd examples
+        sphinx-build -v -a -b html sample_quiz sample_quiz/_build/html
+        cd ..
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
