@@ -43,6 +43,7 @@ jobs:
         echo $PWD
         ls -lRd *
         cd examples
+        ls -lRd *
         sphinx-build -v -a -b html sample_quiz sample_quiz/_build/html
         cd ..
 
