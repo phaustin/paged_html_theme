@@ -1,4 +1,4 @@
-name: theme_dev
+name: buildit
 channels:
   - eoas_ubc
   - conda-forge
@@ -10,10 +10,10 @@ dependencies:
   - sphinx=2.4.4
   - jupyter
   - pip
-  - numpy
-  - matplotlib
   - libsass
   - pip:
+    - click_log
+    - click_completion
     - git+https://github.com/phaustin/jupyter-sphinx.git
     - git+https://github.com/executablebooks/MyST-NB.git
     - git+https://github.com/hcolclou/paged_html_theme.git
