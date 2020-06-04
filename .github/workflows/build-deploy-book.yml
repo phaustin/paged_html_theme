@@ -40,6 +40,8 @@ jobs:
       run: |
         python inject_css.py
         pip install -e .
+        echo $PWD
+        ls -lRd *
         cd ./examples/sample_quiz
         sphinx-build -v -a -b html source _build/html
         cd ./../..
