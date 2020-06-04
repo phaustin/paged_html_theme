@@ -42,8 +42,11 @@ jobs:
         pip install .
         echo $PWD
         ls -lRd *
+        echo "now cd to examples"
         cd examples
+        echo "now another ls"
         ls -lRd *
+        echo "now build the book"
         sphinx-build -v -a -b html sample_quiz sample_quiz/_build/html
         cd ..
 
