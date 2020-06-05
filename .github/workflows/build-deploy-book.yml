@@ -39,7 +39,7 @@ jobs:
       shell: bash -l {0}
       run: |
         python inject_css.py
-        pip install .
+        pip install -e .
         echo $PWD
         ls -lRd *
         echo "now cd to examples"
