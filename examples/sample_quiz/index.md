@@ -16,33 +16,13 @@ kernelspec:
   name: python3
 ---
 
-+++ {"answer": " ", "ctype": "question", "key": "A", "qnum": "1", "quesnum": " "}
-
-Name (Last, First):
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-Student Number:
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-Signature:
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-**This is exam packet (A)**
-
-**Verify that (A) in the ``Test Form'' column of your bubble sheet has been marked**
-
-**Instructions:** You may detach the Bubble sheet (first page) and the
-Equation Sheet (last page) from this exam package. No notes, books,
-cellphones or aids are allowed. Calculators are okay.
-Only answers indicated on the provided Bubble sheet will be marked.
-You must submit both this ``question book'' as well as the Bubble sheet
-before leaving the room.
-
-**Course Statistics** Find the `HOURS STUDIED` area on your Bubble sheet. In the past week, how much time did you spend studying for this exam? Please enter your answer in the `HOURS STUDIED` area of your Bubble sheet. Round to the nearest hour. If, for example, you spent 2 hours studying, enter `002`. If, for example, you spent 14 hours studying, enter `014`.
-
-**This exam booklet should contain 9 questions.**
+# Test page break and header
 
 +++
+
+```
+<div class="page-break"></div>
+```
 
 <div class="page-break"></div>
 
