@@ -86,7 +86,7 @@ Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel t
 
 
 $$
-\int_\alpha^\beta \cos ( \alpha ) \, dx
+\int_\alpha^\beta \cos ( \gamma x ) \, dx
 $$ (eq:labelint)
 
 Breaking page here
@@ -127,8 +127,8 @@ $$(eq:feedback)
 
 +++ 
 
-$$
-\begin{align}
+```{math}
+\begin{align*}
 \text{Layer energy equation:} ~~~ & \frac { d E } { d t } = I _ { \downarrow } + I _ { \uparrow }\\
 \text{Solar constant:}~~~& S= \frac { S _ { 0 } } { 4 } ( 1 - \alpha )\\
 \text{Total grey body flux} ~~~ & I = \varepsilon \sigma T ^ { 4 }\\
@@ -155,14 +155,13 @@ $$
 \text{Climage mean temperature budget:}~~~&\rho _ { w } c _ { w } D \frac { d T } { d t } = \Delta F + \sum f _ { n } \Delta T\\
 \text{Climate feedback factor:}~~~&f _ { n } = \frac { \Delta R } { \Delta T } = \left( \frac { \Delta R } { \Delta \text { climate } } \right) \left( \frac { \Delta \text { climate } } { \Delta T } \right)\\
 \text{Climate sensitivity with feedbacks:}~~~&\lambda = - \frac { 1 } { \sum f _ { n } }
-\end{align}
-$$(eq:eqlis)
-
-+++ {"answer": " ", "ctype": "question", "key": "A", "qnum": "1"}
+\end{align*}
+```
++++ 
 
 # Quiz 2 constants
 
-$$
+```{math}
 \begin{align*}
 &\text{1 ppm = 2.1 Gtonnes Carbon = 7.6 Gtonnes $CO_2$}\\
 \sigma  &= 5.67 \times 10 ^ { - 8 } \mathrm { Wm } ^ { - 2 } \mathrm { K } ^ { - 4 }\\
@@ -171,4 +170,4 @@ c_w  &= 4186\ J\,kg^{-1}\,K^{-1} \\
 \rho_w &= 1000\ kg\,m^{-3}\\
 l_v &= 2.5 \times 10^6\ J\,kg^{-1}
 \end{align*}
-$$(eq:constants)
+```

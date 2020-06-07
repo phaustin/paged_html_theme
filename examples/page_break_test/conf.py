@@ -38,7 +38,8 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md', '.ipynb_checkpoints']
+exclude_patterns = ['**/jupyter_execute','_build', 'Thumbs.db',
+                    '.DS_Store', 'README.md', '.ipynb_checkpoints']
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -55,12 +56,12 @@ html_static_path = ['_static']
 source_suffix = ['.md']
 jupyter_execute_notebooks = "force"
 html_context = {
-    'page_title': 'Sample Quiz',
-    'left_header': 'EOSC 340', 
-    'center_header': 'Quiz 2, February 27, 2020',
+    'page_title': 'Page_break',
+    'left_header': 'test 1',
+    'center_header': 'Page break test',
     'page_margin_top': 1, # in inches
     'page_margin_bottom': 1, # in inches
     'page_margin_left': 1, # in inches
-    'page_margin_right': 1, # in inches
-
+    'page_margin_right': 1 # in inches
 }
+
