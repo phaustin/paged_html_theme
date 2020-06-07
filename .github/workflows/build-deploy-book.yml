@@ -47,7 +47,7 @@ jobs:
         echo "now another ls"
         ls -lRd *
         echo "now build the book"
-        sphinx-build -v -a -b html sample_quiz sample_quiz/_build/html
+        sphinx-build -v -a -b html page_break_test  page_break_test/_build/html
         cd ..
 
     # Push the book's HTML to github-pages
@@ -56,4 +56,4 @@ jobs:
       if: matrix.os == 'ubuntu-latest' && github.event_name == 'push'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./examples/sample_quiz/_build/html
+        publish_dir: ./examples/page_break_test/_build/html
