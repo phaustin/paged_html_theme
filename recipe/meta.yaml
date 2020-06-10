@@ -1,0 +1,42 @@
+{% set version = "0.0.1" %}
+
+package:
+  name: paged_html_theme
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/eoas-ubc/paged_html_theme.git
+  git_tag: release
+
+build:
+  number: 2
+  noarch: python
+  
+  entry_points:
+    
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  build:
+    - python ==3.7.* 
+   
+  run:
+    - python ==3.7.* 
+
+test:
+  imports:
+    - paged_html_theme
+
+about:
+  home: https://github.com/eoas-ubc/paged_html_theme
+  license: BSD-3-Clause
+  license_file: LICENSE.txt
+  license_family: BSD
+  summary: 'sphinx theme for pdf printing'
+  description: |
+    python_html_theme uses pagedjs to implement
+    css3 @page media formatting
+
+extra:
+  recipe-maintainers:
+    - phaustin
