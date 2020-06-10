@@ -5,25 +5,27 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/eoas-ubc/paged_html_theme.git
-  git_tag: release
+  path: ../
 
 build:
-  number: 4
+  number: 7
   noarch: python
   
   entry_points:
     
-  script: "{{ PYTHON }} -m pip install -e . -vv"
 
 requirements:
   build:
     - python ==3.7.*
     - sphinx <3.0
+    - click
+    - libsass
    
   run:
     - python ==3.7.* 
     - sphinx <3.0
+    - click
+    - libsass
 
 test:
   imports:

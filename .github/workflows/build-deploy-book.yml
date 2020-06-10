@@ -39,13 +39,7 @@ jobs:
       shell: bash -l {0}
       run: |
         python inject_css.py
-        pip install -e .
-        echo $PWD
-        ls -lRd *
-        echo "now cd to examples"
-        cd examples
-        echo "now another ls"
-        ls -lRd *
+        pip install .
         echo "now build the book"
         sphinx-build -v -a -b html page_break_test  page_break_test/_build/html
         cd ..
