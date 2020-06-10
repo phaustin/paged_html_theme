@@ -1,4 +1,4 @@
-name: buildit
+name: theme_dev
 channels:
   - eoas_ubc
   - conda-forge
@@ -8,6 +8,7 @@ dependencies:
   - click
   - sphinx=2.4.4
   - jupyter
+  - runjb
   - pip
   - libsass
   - pip:
