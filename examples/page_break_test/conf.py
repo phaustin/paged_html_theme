@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Sample Quiz'
-copyright = 'Sample Quiz'
-author = 'Sample Quiz'
+copyright = '2020'
+author = 'Harlan Colclough and Philip Austin'
 
 
 # -- General configuration ---------------------------------------------------
@@ -32,15 +32,14 @@ extensions = [
     "sphinx.ext.mathjax",
 ]
 
-mathjax_path="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['build', 'Thumbs.db', '.DS_Store', 'README.md', '.ipynb_checkpoints']
+exclude_patterns = ['**/jupyter_execute','_build', 'Thumbs.db',
+                    '.DS_Store', 'README.md', '.ipynb_checkpoints']
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -54,14 +53,15 @@ html_theme = "paged_html_theme"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-jupyter_execute_notebooks = "cache"
+source_suffix = ['.md']
+jupyter_execute_notebooks = "force"
 html_context = {
-    'page_title': 'Sample Quiz',
-    'left_header': 'EOSC 340', 
-    'center_header': 'Quiz 2, February 27, 2020',
+    'page_title': 'Page_break',
+    'left_header': 'test 1',
+    'center_header': 'Page break test',
     'page_margin_top': 1, # in inches
     'page_margin_bottom': 1, # in inches
     'page_margin_left': 1, # in inches
-    'page_margin_right': 1, # in inches
-
+    'page_margin_right': 1 # in inches
 }
+

@@ -5,18 +5,17 @@ channels:
   - defaults
 dependencies:
   - python=3.7.*
-  - runjb
   - click
   - sphinx=2.4.4
   - jupyter
+  - runjb
   - pip
-  - numpy
-  - matplotlib
   - libsass
   - pip:
-    - git+https://github.com/phaustin/jupyter-sphinx.git
+    - click_log
+    - click_completion
+    - git+https://github.com/jupyter/jupyter-sphinx.git
     - git+https://github.com/executablebooks/MyST-NB.git
-    - git+https://github.com/hcolclou/paged_html_theme.git
     - git+https://github.com/mwouts/jupytext.git
 
 

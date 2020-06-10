@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
     steps:
     - uses: actions/checkout@v2
 
@@ -39,10 +39,11 @@ jobs:
       shell: bash -l {0}
       run: |
         python inject_css.py
-        pip install -e .
-        cd ./examples/sample_quiz
-        sphinx-build -v -a -b html source _build/html
-        cd ./../..
+        pip install .
+        echo "now build the book"
+        cd examples
+        sphinx-build -v -a -b html page_break_test  page_break_test/_build/html
+        cd ..
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
@@ -50,4 +51,4 @@ jobs:
       if: matrix.os == 'ubuntu-latest' && github.event_name == 'push'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./examples/sample_quiz/_build/html
+        publish_dir: ./examples/page_break_test/_build/html
