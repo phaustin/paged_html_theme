@@ -1,0 +1,38 @@
+/*********************************************
+* Print-specific CSS *
+*********************************************/
+@media print {
+  html {
+    font-family: sans-serif; }
+  .page-break {
+    break-before: page; }
+  div.cell_input {
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    background: #f7f7f7;
+    line-height: 1.21429em;
+    padding-left: 10px; }
+  div.cell_output {
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    background: #f7f7f7;
+    line-height: 1.21429em;
+    padding-left: 10px;
+    margin-top: 10px; }
+  span.eqno {
+    float: right;
+    margin-right: 16px; }
+  span.eqno a.headerlink {
+    position: absolute;
+    z-index: 1; }
+  a.headerlink {
+    color: #c60f0f;
+    font-size: .8em;
+    padding: 0 4px;
+    text-decoration: none;
+    visibility: hidden; }
+  a.headerlink:hover {
+    background-color: #c60f0f;
+    color: #fff; }
+  div.math:hover a.headerlink {
+    visibility: visible; } }
