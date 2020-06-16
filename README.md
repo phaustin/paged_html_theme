@@ -1,27 +1,68 @@
 # PagedJS HTML Sphinx Theme
 
-## Installation and Building
+## Background
 
-1. Prepare your environment using the environment.yml file.
+This theme provides a [Sphinx](https://github.com/sphinx-doc/sphinx)
+template that uses the [pagedjs](https://www.pagedjs.org/documentation/)
+Javascript library to provide a few of the forthcoming
+[CSS3 paged media](https://print-css.rocks/lessons) directives for pdf pagination and
+headers/footers. It is  based on the pandoc template for
+[rstudio/pagedown](https://github.com/rstudio/pagedown).
 
-2. To install theme, run:
+It was created by @hcolclou as part of the [EOAS/UBC courseware project](https://eoas-ubc.github.io/)
+
+## Demonstration
+
+An example build:
+
+* [The original myst markdown](https://github.com/eoas-ubc/paged_html_theme/blob/master/examples/page_break_test/index.md)
+
+* [The rendered html](https://phaustin.github.io/paged_html_theme/)
+
+## Installation
+
+1. conda
+
+   ```conda install -c eoas_ubc paged_html_theme```
+
+2. development
+
+- clone the repository
 
 ```
+git clone https://github.com/eoas-ubc/paged_html_theme.git
+```
+
+- create the environment and activate
+
+```
+cd paged_html_theme
+conda env create -f environment.yml
+activate buildit
+```
+
+- compile the scss, insert into the template and install
+
+```
+cd paged_html_theme
+python inject_css.py
 pip install -e .
 ```
 
-3. To build the theme (inject stylesheet into HTML), run the following. This is a required step. If the CSS is linked to from the HTML, the page cannot load without the CSS file being hosted somewhere. This  works around that by putting the CSS inside <style> tags directly in the HTML. They are not combined from the beginning so that it is easier for developers.
+- build the example
 
 ```
-python inject_css.py
+cd examples
+sphinx-build -v -a -b html page_break_test  page_break_test/_build/html
 ```
 
-4. Then you can build a sample by cd'ing into its folder and running:
-```
-sphinx-build -v -a -b html source _build/html
-```
+- the processed html is `page_break_test/_build/html/index.html`
 
-5. Now you should be able to open the index.html files located in each of the samples' \_build/html folders. 
+## Adjustable parameters/features
 
-## Notes
-The current state of the sample quiz built from master can be found [here](https://hcolclou.github.io/paged_html_theme/).
+- To insert a pagebreak, use `<div class="page-break"></div>`
+
+- To change the page size, or the left and center header edit the
+[html_context](https://github.com/eoas-ubc/paged_html_theme/blob/16bded6351d782f7f279f8d169dcf73e603c274d/examples/page_break_test/conf.py#L58-L65)
+
+  
