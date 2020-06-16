@@ -39,7 +39,7 @@ git clone https://github.com/eoas-ubc/paged_html_theme.git
 ```
 cd paged_html_theme
 conda env create -f environment.yml
-coonda activate buildit
+conda activate buildit
 ```
 
 - compile the scss, insert into the template and install
