@@ -4,12 +4,13 @@
 
 This theme provides a [Sphinx](https://github.com/sphinx-doc/sphinx)
 template that uses the [pagedjs](https://www.pagedjs.org/documentation/)
-Javascript library to provide a few of the forthcoming
+Javascript library to implement a few of the forthcoming
 [CSS3 paged media](https://print-css.rocks/lessons) directives for pdf pagination and
 headers/footers. It is  based on the pandoc template for
 [rstudio/pagedown](https://github.com/rstudio/pagedown).
 
-It was created by @hcolclou as part of the [EOAS/UBC courseware project](https://eoas-ubc.github.io/)
+It was created by [Harlan Colclough](https://github.com/hcolclou) as part of the 
+[EOAS/UBC courseware project](https://eoas-ubc.github.io/)
 
 ## Demonstration
 
