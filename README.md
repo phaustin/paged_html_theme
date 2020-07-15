@@ -22,7 +22,11 @@ An example build:
 
 ## Installation
 
-* ```conda install -c eoas_ubc paged_html_theme```
+```
+conda env create -f environment.yml
+conda activate theme_dev
+conda install -c eoas_ubc paged_html_theme
+```
    
 ## Build the example
 
