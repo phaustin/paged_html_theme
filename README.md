@@ -78,6 +78,7 @@ sphinx-build -v -a -b html page_break_test  page_break_test/_build/html
 
 ## Next steps/notes
 
-1. Make parameter setup compatible with the latex pdf builder
+1. Make parameter setup compatible with the latex pdf builder via
+   [issue 201](https://github.com/executablebooks/MyST-NB/issues/201)
 
 2. Add bookmarks once chrome implements [781797](https://bugs.chromium.org/p/chromium/issues/detail?id=781797)
