@@ -28,6 +28,7 @@ An example build:
 
 1. `cd examples`
 2. `sphinx-build -v -a -b html page_break_test  page_break_test/_build/html`
+3.  Point your browser at `page_break_test/_build/html/index.html`
 
 ## Development
 
