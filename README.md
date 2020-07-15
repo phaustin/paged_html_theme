@@ -22,11 +22,14 @@ An example build:
 
 ## Installation
 
-1. conda
+* ```conda install -c eoas_ubc paged_html_theme```
+   
+## Build the example
 
-   ```conda install -c eoas_ubc paged_html_theme```
+1. `cd examples`
+2. `sphinx-build -v -a -b html page_break_test  page_break_test/_build/html`
 
-2. development
+## Development
 
 - clone the repository
 
@@ -66,10 +69,10 @@ sphinx-build -v -a -b html page_break_test  page_break_test/_build/html
 - To change the page size, or the left and center header edit the
 [html_context](https://github.com/eoas-ubc/paged_html_theme/blob/16bded6351d782f7f279f8d169dcf73e603c274d/examples/page_break_test/conf.py#L58-L65)
 
-  
++++
+
 ## Next steps/notes
 
 1. Make parameter setup compatible with the latex pdf builder
 
 2. Add bookmarks once chrome implements [781797](https://bugs.chromium.org/p/chromium/issues/detail?id=781797)
-
