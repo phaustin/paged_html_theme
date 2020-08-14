@@ -9,7 +9,7 @@ Javascript library to implement a few of the forthcoming
 headers/footers. It is  based on the pandoc template for
 [rstudio/pagedown](https://github.com/rstudio/pagedown).
 
-It was created by [Harlan Colclough](https://github.com/hcolclou) as part of the 
+It was created by [Mara Colclough](https://github.com/maracieco) as part of the 
 [EOAS/UBC courseware project](https://eoas-ubc.github.io/)
 
 ## Demonstration
