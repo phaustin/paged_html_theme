@@ -4,19 +4,15 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.7.*
+  - python=3.8
+  - importlib_resources
   - click
-  - sphinx=2.4.4
+  - sphinx>3.1
   - jupyter
-  - runjb
+  - jupytext
   - pip
   - libsass
-  - pip:
-    - click_log
-    - click_completion
-    - git+https://github.com/jupyter/jupyter-sphinx.git
-    - git+https://github.com/executablebooks/MyST-NB.git
-    - git+https://github.com/mwouts/jupytext.git
+#conda-lock -f environment.yml -p linux-64
 
 
 

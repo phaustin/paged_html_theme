@@ -1,4 +1,4 @@
-{% set version = "0.0.1" %}
+{% set version = "0.0.2" %}
 
 package:
   name: paged_html_theme
@@ -8,26 +8,27 @@ source:
   path: ../
 
 build:
-  number: 7
+  number: 0
   noarch: python
-  
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
-    
+    - build_page = paged_html_theme.scripts.build_page:main
 
 requirements:
   build:
-    - python ==3.7.*
-    - sphinx <3.0
+    - python==3.8
+    - sphinx>=3.0
     - click
-    - libsass
    
   run:
-    - python ==3.7.* 
-    - sphinx <3.0
+    - importlib_resources
+    - python==3.8
+    - sphinx>=3.0
     - click
-    - libsass
 
 test:
+  commands:
+    - build_page --help
   imports:
     - paged_html_theme
 

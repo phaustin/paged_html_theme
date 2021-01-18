@@ -1,0 +1,6 @@
+click_log
+click_completion
+jupytext
+jupyter-sphinx
+MyST-NB
+
