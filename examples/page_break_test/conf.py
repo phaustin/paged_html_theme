@@ -49,7 +49,7 @@ exclude_patterns = ['**/jupyter_execute','_build', 'Thumbs.db',
 #
 html_theme = "paged_html_theme"
 
-master_doc = 'index'
+master_doc = 'test_file'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -65,8 +65,8 @@ html_context = {
     'page_title': 'Day 03 quiz',
     'left_header': 'Jan. 19, 2021',
     'center_header': 'Day 03 quiz',
-    'page_margin_top': 3,
-    'page_margin_bottom': 3,
-    'page_margin_left': 3,
-    'page_margin_right': 3
+    'page_margin_top': 1,
+    'page_margin_bottom': 1,
+    'page_margin_left': 1,
+    'page_margin_right': 1
 }

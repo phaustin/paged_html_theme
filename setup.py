@@ -13,5 +13,7 @@ setup(
             'build_page = paged_html_theme.scripts.build_page:main'
         ]
     },
-    install_requires=['sphinx>=3']
+    install_requires=[
+        'sphinx>=3.1',
+        'importlib_resources']
 )

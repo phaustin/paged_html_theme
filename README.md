@@ -23,16 +23,20 @@ An example build:
 ## Installation
 
 ```
-conda env create -f environment.yml
-conda activate theme_dev
 conda install -c eoas_ubc paged_html_theme
+
+or
+
+pip install .
 ```
    
 ## Build the example
 
-1. `cd examples`
-2. `sphinx-build -v -a -b html page_break_test  page_break_test/_build/html`
-3.  Point your browser at `page_break_test/_build/html/index.html`
+`build_page examples/page_break_test/test_file.md examples/page_break_test/headers.json --generate_json`
+
+which will make a dummy headers.json file that can be customized and place the page html in
+
+`examples/page_break_test/_test_file_build/test_file.html`
 
 ## Development
 
@@ -46,11 +50,11 @@ git clone https://github.com/eoas-ubc/paged_html_theme.git
 
 ```
 cd paged_html_theme
-conda env create -f environment.yml
+conda  env create --name theme_dev --file environment.yml
 conda activate theme_dev
 ```
 
-- compile the scss, insert into the template and install
+- compile the scss, insert the css into the jinja2 template and install
 
 ```
 cd paged_html_theme
@@ -58,21 +62,17 @@ python inject_css.py
 pip install -e .
 ```
 
-- build the example
+- build the example as above
 
 ```
-cd examples
-sphinx-build -v -a -b html page_break_test  page_break_test/_build/html
+`build_page examples/page_break_test/test_file.md examples/page_break_test/headers.json --generate_json`
 ```
-
-- the processed html is `page_break_test/_build/html/index.html`
 
 ## Adjustable parameters/features
 
 - To insert a pagebreak, use `<div class="page-break"></div>`
 
-- To change the page size, or the left and center header edit the
-[html_context](https://github.com/eoas-ubc/paged_html_theme/blob/16bded6351d782f7f279f8d169dcf73e603c274d/examples/page_break_test/conf.py#L58-L65)
+- To change the page size, or the left and center header edit headers.json
 
 +++
 
