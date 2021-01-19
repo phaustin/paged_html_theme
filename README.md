@@ -36,7 +36,7 @@ conda install -c eoas_ubc paged_html_theme
 ```
 git clone https://github.com/eoas-ubc/paged_html_theme.git
 cd paged_html_thme
-``
+```
 
 - execute `build_page` to build the example
   if the `--generate_json` flag is given, a json file
@@ -44,8 +44,9 @@ cd paged_html_thme
 
 ```
 build_page examples/page_break_test/test_file.md  \
-  examples/page_break_test/headers.json --generate_json`
-  ```
+  examples/page_break_test/headers.json --generate_json
+```
+
 - this will write two files:
 
   `examples/page_break_test/_test_file_build/test_file.html`
@@ -80,7 +81,8 @@ pip install -e .
 - build the example as above
 
 ```
-`build_page examples/page_break_test/test_file.md examples/page_break_test/headers.json --generate_json`
+build_page examples/page_break_test/test_file.md \
+    examples/page_break_test/headers.json --generate_json
 ```
 
 ## Adjustable parameters/features
