@@ -53,14 +53,14 @@ build_page examples/page_break_test/test_file.md  \
 
 and
 
-  ``examples/page_break_test/headers.json`
+  `examples/page_break_test/headers.json`
 
 - Edit `headers.json` to change headers.
 
 
 ## Development
 
-```
+
 
 - create the environment and activate
 
@@ -90,8 +90,6 @@ build_page examples/page_break_test/test_file.md \
 - To insert a pagebreak, use `<div class="page-break"></div>`
 
 - To change the page size, or the left and center header edit headers.json
-
-+++
 
 ## Next steps/notes
 
