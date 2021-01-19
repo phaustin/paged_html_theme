@@ -18,7 +18,7 @@ An example build:
 
 * [The original myst markdown](https://github.com/eoas-ubc/paged_html_theme/blob/master/examples/page_break_test/test_file.md)
 
-Formatted as with page-breaks, page numbers and header information from the file [headers.json](https://github.com/eoas-ubc/paged_html_theme/blob/master/examples/page_break_test/headers.json)
+Formatted  with page-breaks, page numbers and header information from the file [headers.json](https://github.com/eoas-ubc/paged_html_theme/blob/master/examples/page_break_test/headers.json)
 
 * [The rendered html](https://phaustin.github.io/paged_html_theme/test_file.html)
 
