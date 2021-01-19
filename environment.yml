@@ -12,6 +12,7 @@ dependencies:
   - jupytext
   - pip
   - libsass
+  - ghp-import
 #conda-lock -f environment.yml -p linux-64
 
 

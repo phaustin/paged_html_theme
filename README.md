@@ -18,32 +18,45 @@ An example build:
 
 * [The original myst markdown](https://github.com/eoas-ubc/paged_html_theme/blob/master/examples/page_break_test/index.md)
 
-* [The rendered html](https://phaustin.github.io/paged_html_theme/)
+* [The rendered html](https://phaustin.github.io/paged_html_theme/test_file.html)
 
 ## Installation
 
 ```
 conda install -c eoas_ubc paged_html_theme
 
-or
-
-pip install .
 ```
-   
+
 ## Build the example
 
-`build_page examples/page_break_test/test_file.md examples/page_break_test/headers.json --generate_json`
-
-which will make a dummy headers.json file that can be customized and place the page html in
-
-`examples/page_break_test/_test_file_build/test_file.html`
-
-## Development
-
-- clone the repository
+- clone the repository and cd to the directory
 
 ```
 git clone https://github.com/eoas-ubc/paged_html_theme.git
+cd paged_html_thme
+``
+
+- execute `build_page` to build the example
+  if the `--generate_json` flag is given, a json file
+  containing dummy header arguments and page margins is created.
+
+```
+build_page examples/page_break_test/test_file.md  \
+  examples/page_break_test/headers.json --generate_json`
+  ```
+- this will write two files:
+
+  `examples/page_break_test/_test_file_build/test_file.html`
+
+and
+
+  ``examples/page_break_test/headers.json`
+
+- Edit `headers.json` to change headers.
+
+
+## Development
+
 ```
 
 - create the environment and activate
