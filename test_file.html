@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>Day 03 quiz</title>
+        <!-- metadata -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- scripts -->
+        <script src="_static/js/load_mathjax.js"></script>
+        <script src="_static/js/paged.js"></script>
+        <script src="_static/js/config.js"></script>
+        
+        <style>
+            /* print styles go here */
+            @page {
+                @top-left {
+                    content: "Jan. 19, 2021"
+                }
+                @top-center {
+                    content: "Day 03 quiz"
+                }
+                @top-right {
+                    content: "page: " counter(page) "/" counter(pages);
+                }
+                size: letter;
+                margin-top: 1in;
+                margin-bottom: 1in;
+                margin-left: 1in;
+                margin-right: 1in;
+            }
+   
+            @media print {
+   
+                body {
+                    font-size: 12px;
+                    margin: 0;
+                }
+                
+                brk {
+                    /* Section always get their own page */
+                    page-break-before: always;
+                }
+                
+                /* avoid splitting of ul elements */
+                ul {
+                    page-break-inside: avoid;
+                }
+                
+                /* Print at least 2 lines on the current page and 4 lines on the next page */
+                p {
+                    widows: 4;
+                    orphans: 2;
+                }
+            }
+   
+            @media (min-width: 48em) {
+                body {
+                    max-width: 48em;
+                }
+            }
+
+/*********************************************
+* Print-specific CSS *
+*********************************************/
+@media print {
+  html {
+    font-family: sans-serif; }
+  .page-break {
+    break-before: page; }
+  div.cell_input {
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    background: #f7f7f7;
+    line-height: 1.21429em;
+    padding-left: 10px; }
+  div.cell_output {
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    background: #f7f7f7;
+    line-height: 1.21429em;
+    padding-left: 10px;
+    margin-top: 10px; }
+  span.eqno {
+    float: right;
+    margin-right: 16px; }
+  span.eqno a.headerlink {
+    position: absolute;
+    z-index: 1; }
+  a.headerlink {
+    color: #c60f0f;
+    font-size: .8em;
+    padding: 0 4px;
+    text-decoration: none;
+    visibility: hidden; }
+  a.headerlink:hover {
+    background-color: #c60f0f;
+    color: #fff; }
+  div.math:hover a.headerlink {
+    visibility: visible; } }
+
+        </style>
+    </head>
+
+    <body>
+
+  <ol>
+<li><p>A “greybody” has a temperature of 240 K and we measure the flux
+radiating from it over all wavelengths to be 75 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span>.
+What is its greybody emissivity ε?</p>
+<p>A)  about 0.35<br />
+B)  about 0.40<br />
+C)  about 0.50<br />
+D)  about 0.65<br />
+E)  about 0.85</p>
+</li>
+<li><p>Two objects have different temperatures. Body A has a temperature of
+300 K and emissivity ε=0.2, whereas Body B has a temperature of 240
+K but has an emissivity of ε=0.75. Which of the following statements
+is correct regarding the radiation flux?</p>
+<p>A)  Body A emits more flux than Body B<br />
+B)  Neither object emits radiation<br />
+C)  Both emit roughly the same amount<br />
+D)  Body B emits more flux than Body A<br />
+E)  Not enough information</p>
+</li>
+<li><p>Use the figure below to estimate the radiative flux emitted by a
+300 K blackbody in the wavelength range 15 to 20 <span class="math notranslate nohighlight">\(\mu m\)</span>.</p>
+<p>A) between 10-40 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span><br />
+B) between 40-70 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span><br />
+C) between 70-100  <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span><br />
+D) between 100-130 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span><br />
+E) between 130-160 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span></p>
+<div class="figure align-default" id="label">
+<img alt="_images/q3.png" src="_images/q3.png" />
+<p class="caption"><span class="caption-text">Monochromatic blackbody flux vs. wavelength</span><a class="headerlink" href="#label" title="Permalink to this image">¶</a></p>
+</div>
+</li>
+<li><p>We measure the flux being emitted from a blackbody with a infrared
+camera and find the blackbody is emitting 12 <span class="math notranslate nohighlight">\(W\,m^{-2}\,\mu m^{-1}\)</span>
+at wavelength <span class="math notranslate nohighlight">\(\lambda = 10\ \mu m\)</span>. Using the Planck
+function diagram from question 3 above, what do you estimate for the
+temperature of the blackbody?</p>
+<p>A)  210 K<br />
+B)  230 K<br />
+C)  250 K<br />
+D)  270 K<br />
+E)  290 K</p>
+</li>
+<li><p>A beam of light with a flux of 150 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> shines on a wall
+with an emissivity ε = 0.2 and a transmissivity tr = 0.5. How much
+of the beam is absorbed, reflected, and transmitted by the wall?</p>
+<p>A)  45 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> absorbed; 60 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> transmitted; 45 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> reflected<br />
+B)  30 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> absorbed; 45 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> transmitted; 75 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> reflected<br />
+C)  75 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> absorbed; 45 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> transmitted; 35 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> reflected<br />
+D)  75 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> absorbed; 45 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> transmitted; 30 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> reflected<br />
+E)  50 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> absorbed; 65 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> transmitted;  35 <span class="math notranslate nohighlight">\(W\,m^{-2}\)</span> reflected</p>
+</li>
+</ol>
+
+
+    </body>
+</html>
