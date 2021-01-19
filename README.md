@@ -16,7 +16,9 @@ It was created by [Mara Colclough](https://github.com/maracieco) as part of the
 
 An example build:
 
-* [The original myst markdown](https://github.com/eoas-ubc/paged_html_theme/blob/master/examples/page_break_test/index.md)
+* [The original myst markdown](https://github.com/eoas-ubc/paged_html_theme/blob/master/examples/page_break_test/test_file.md)
+
+Formatted as with page-breaks, page numbers and header information from the file [headers.json](https://github.com/eoas-ubc/paged_html_theme/blob/master/examples/page_break_test/headers.json)
 
 * [The rendered html](https://phaustin.github.io/paged_html_theme/test_file.html)
 
@@ -67,7 +69,7 @@ conda  env create --name theme_dev --file environment.yml
 conda activate theme_dev
 ```
 
-- compile the scss, insert the css into the jinja2 template and install
+- compile the scss, insert the css into the jinja2 template and install `paged_html_theme`
 
 ```
 cd paged_html_theme
