@@ -59,15 +59,15 @@ def main(myst_file,header_file,generate_json):
     root_dir = myst_file.parent
     output_dir = root_dir /  f'_{stem_name}_build'
     if generate_json:
-        with ir.open_text('paged_html_theme.templates','headers.json') as header_in:
+        with ir.open_text('paged_html_theme.templates','headers.json',encoding='utf-8') as header_in:
             header_contents = header_in.read()
-        with open(header_file,'w') as header_out:
+        with open(header_file,'w',encoding='utf-8') as header_out:
             header_out.write(header_contents)
         print(f"wrote sample header file \n{header_contents} to \n{str(header_file)}\n")
-    with open(header_file,'r') as input:
+    with open(header_file,'r',encoding='utf-8') as input:
         header_dict = json.load(input)
     contents=list(ir.contents('paged_html_theme.templates'))
-    with ir.open_text('paged_html_theme.templates','conf_py.j2') as the_conf:
+    with ir.open_text('paged_html_theme.templates','conf_py.j2',encoding='utf-8') as the_conf:
         conf_j2 = jinja2.Template(the_conf.read())
     if not Path(myst_file).is_file():
         raise ValueError(f"could not find {myst_file}")
@@ -76,7 +76,7 @@ def main(myst_file,header_file,generate_json):
     header_dict['stem_name']=stem_name
     conf_file = conf_j2.render(**header_dict)
     with cd(root_dir):
-        with open('conf.py','w') as conf_out:
+        with open('conf.py','w',encoding='utf-8') as conf_out:
             conf_out.write(conf_file)
         print(f"running the command \n{argstring}\n")
         result = subprocess.run(argstring, capture_output=True, shell=True)

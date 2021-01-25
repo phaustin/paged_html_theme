@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='paged-html-theme',
-    version="0.2",
+    version="0.3",
     packages=["paged_html_theme"],
     include_package_data=True,
     entry_points = {
